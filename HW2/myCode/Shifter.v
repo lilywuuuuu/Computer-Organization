@@ -1,0 +1,111 @@
+module Shifter( result, leftRight, shamt, sftSrc  );
+    
+  output wire[31:0] result;
+
+  input wire leftRight;
+  input wire[4:0] shamt;
+  input wire[31:0] sftSrc ;
+  
+  /*your code here*/ 
+  wire shiftRight;
+  wire left1, left2, left3, left4, left5, left6, left7, left8, left9, left10, left11, left12, left13, left14, left15, left16, left17, left18, left19, left20, left21, left22, left23, left24, left25, left26, left27, left28, left29, left30;
+  wire right1, right2, right3, right4, right5, right6, right7, right8, right9, right10, right11, right12, right13, right14, right15, right16, right17, right18, right19, right20, right21, right22, right23, right24, right25, right26, right27, right28, right29, right30;
+
+  not N1(shiftRight, leftRight);
+
+  and L1(left1, sftSrc[0], leftRight);
+  and L2(left2, sftSrc[1], leftRight);
+  and L3(left3, sftSrc[2], leftRight);
+  and L4(left4, sftSrc[3], leftRight);
+  and L5(left5, sftSrc[4], leftRight);
+  and L6(left6, sftSrc[5], leftRight);
+  and L7(left7, sftSrc[6], leftRight);
+  and L8(left8, sftSrc[7], leftRight);
+  and L9(left9, sftSrc[8], leftRight);
+  and L10(left10, sftSrc[9], leftRight);
+  and L11(left11, sftSrc[10], leftRight);
+  and L12(left12, sftSrc[11], leftRight);
+  and L13(left13, sftSrc[12], leftRight);
+  and L14(left14, sftSrc[13], leftRight);
+  and L15(left15, sftSrc[14], leftRight);
+  and L16(left16, sftSrc[15], leftRight);
+  and L17(left17, sftSrc[16], leftRight);
+  and L18(left18, sftSrc[17], leftRight);
+  and L19(left19, sftSrc[18], leftRight);
+  and L20(left20, sftSrc[19], leftRight);
+  and L21(left21, sftSrc[20], leftRight);
+  and L22(left22, sftSrc[21], leftRight);
+  and L23(left23, sftSrc[22], leftRight);
+  and L24(left24, sftSrc[23], leftRight);
+  and L25(left25, sftSrc[24], leftRight);
+  and L26(left26, sftSrc[25], leftRight);
+  and L27(left27, sftSrc[26], leftRight);
+  and L28(left28, sftSrc[27], leftRight);
+  and L29(left29, sftSrc[28], leftRight);
+  and L30(left30, sftSrc[29], leftRight);
+  and L31(result[31], sftSrc[30], leftRight);
+
+  and R0(result[0], sftSrc[1], shiftRight);
+  and R1(right1, sftSrc[2], shiftRight);
+  and R2(right2, sftSrc[3], shiftRight);
+  and R3(right3, sftSrc[4], shiftRight);
+  and R4(right4, sftSrc[5], shiftRight);
+  and R5(right5, sftSrc[6], shiftRight);
+  and R6(right6, sftSrc[7], shiftRight);
+  and R7(right7, sftSrc[8], shiftRight);
+  and R8(right8, sftSrc[9], shiftRight);
+  and R9(right9, sftSrc[10], shiftRight);
+  and R10(right10, sftSrc[11], shiftRight);
+  and R11(right11, sftSrc[12], shiftRight);
+  and R12(right12, sftSrc[13], shiftRight);
+  and R13(right13, sftSrc[14], shiftRight);
+  and R14(right14, sftSrc[15], shiftRight);
+  and R15(right15, sftSrc[16], shiftRight);
+  and R16(right16, sftSrc[17], shiftRight);
+  and R17(right17, sftSrc[18], shiftRight);
+  and R18(right18, sftSrc[19], shiftRight);
+  and R19(right19, sftSrc[20], shiftRight);
+  and R20(right20, sftSrc[21], shiftRight);
+  and R21(right21, sftSrc[22], shiftRight);
+  and R22(right22, sftSrc[23], shiftRight);
+  and R23(right23, sftSrc[24], shiftRight);
+  and R24(right24, sftSrc[25], shiftRight);
+  and R25(right25, sftSrc[26], shiftRight);
+  and R26(right26, sftSrc[27], shiftRight);
+  and R27(right27, sftSrc[28], shiftRight);
+  and R28(right28, sftSrc[29], shiftRight);
+  and R29(right29, sftSrc[30], shiftRight);
+  and R30(right30, sftSrc[31], shiftRight);
+
+  or  U1(result[1], left1, right1);
+  or  U2(result[2], left2, right2);
+  or  U3(result[3], left3, right3);
+  or  U4(result[4], left4, right4);
+  or  U5(result[5], left5, right5);
+  or  U6(result[6], left6, right6);
+  or  U7(result[7], left7, right7);
+  or  U8(result[8], left8, right8);
+  or  U9(result[9], left9, right9);
+  or  U10(result[10], left10, right10);
+  or  U11(result[11], left11, right11);
+  or  U12(result[12], left12, right12);
+  or  U13(result[13], left13, right13);
+  or  U14(result[14], left14, right14);
+  or  U15(result[15], left15, right15);
+  or  U16(result[16], left16, right16);
+  or  U17(result[17], left17, right17);
+  or  U18(result[18], left18, right18);
+  or  U19(result[19], left19, right19);
+  or  U20(result[20], left20, right20);
+  or  U21(result[21], left21, right21);
+  or  U22(result[22], left22, right22);
+  or  U23(result[23], left23, right23);
+  or  U24(result[24], left24, right24);
+  or  U25(result[25], left25, right25);
+  or  U26(result[26], left26, right26);
+  or  U27(result[27], left27, right27);
+  or  U28(result[28], left28, right28);
+  or  U29(result[29], left29, right29);
+  or  U30(result[30], left30, right30);
+
+endmodule
